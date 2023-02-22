@@ -1,0 +1,42 @@
+{% extends './customer_main.html' %}
+{% load static %}
+{% block content %}
+<br><br><br>
+
+<div class="row d-flex justify-content-center">
+    
+    <div class="col-8">
+    
+<h1 class="text-center">change password</h1>
+<form method="POST"  class="form1">
+    {% csrf_token %}
+    
+    <div class="mb-3 ">
+      <label for="exampleInputPassword1" class="form-label ">Old Password</label>
+      <input type="password" class="form-control" name="old_password" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 ">
+        <label for="exampleInputPassword1" class="form-label ">New Password</label>
+        <input type="password" class="form-control" name="new_password" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 ">
+        <label for="exampleInputPassword1" class="form-label ">Confirm Password</label>
+        <input type="password" class="form-control" name="confirm_password" id="exampleInputPassword1">
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+    {{success}} {{error}}
+  </form>
+</div>
+</div>
+<br><br><br>
+
+
+
+
+
+  
+
+
+{% endblock content %}

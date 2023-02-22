@@ -1,0 +1,47 @@
+{% extends './main.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center">View Seller Details</h1>
+
+
+<table class="table table-striped mt-5">
+    <thead >
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Status</th>
+        <th scope="col">seller pic</th>
+      </tr>
+    </thead>
+    {% for i in seller %}
+    <tbody>
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td >{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.phone}}</td>
+        {% if i.status == 'rejected' %}
+        <td data-item="{{i.id}}"><span class="text-danger">{{i.status}}</span></td>
+
+        {% else %}
+        <td data-item="{{i.id}}"><span class="text-success">{{i.status}}</span></td>
+
+        {% endif %}
+        <td><img style="height: 50px;width: 70px;" src="{{i.seller_pic.url}}" alt=""></td>
+      </tr>
+    </tbody>
+      {% endfor %}
+     
+   
+  </table>
+
+
+ 
+ 
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+{% endblock content %}

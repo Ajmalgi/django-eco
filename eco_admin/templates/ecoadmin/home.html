@@ -1,0 +1,83 @@
+{% extends './main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row justify-content-around d-flex text-center">
+<div class="card col-2" style="width: 18rem;">
+  <a style="text-decoration: none;" href="{% url 'eco_admin_app:approve_seller' %}"><div class="card-body">
+      <h1 class="card-title"><img style="height:50px;width:50px" src="{% static 'images/best-seller.png' %}"></h1>
+      <h2 class="card-subtitle mb-2 text-muted">Approve Seller</h2>
+    </div></a>
+  </div>
+  <div class="card col-2" style="width: 18rem;">
+    <a style="text-decoration: none;" href="{% url 'eco_admin_app:view_seller' %}"><div class="card-body">
+      <h1 class="card-title"><img style="height:50px;width:50px" src="{% static 'images/businessman.png' %}" alt=""></h1>
+      <h2 class="card-subtitle mb-2 text-muted">View Seller</h2>
+    </div></a>
+  </div>
+  <div class="card col-2" style="width: 18rem;">
+    <a style="text-decoration: none;" href="{% url 'eco_admin_app:view_customer' %}"><div class="card-body">
+      <h1 class="card-title"><img style="height:50px;width:50px" src="{% static 'images/man.png' %}" alt=""></h1>
+      <h2 class="card-subtitle mb-2 text-muted">View Customer</h2>
+    </div></a>
+  </div>
+ 
+</div>
+<div class="row justify-content-around d-flex mt-5 text-center">
+
+    <div class="card col-2" style="width: 18rem;">
+        <div class="card-body">
+            <h1 class="card-title"><img style="height:50px;width:50px" src="{% static 'images/checkout.png' %}" alt=""></h1>
+          <h2 class="card-subtitle mb-2 text-muted">View Order</h2>
+        </div>
+      </div>
+      <div class="card col-2" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title"><img  style="height:50px;width:50px" src="{% static 'images/refresh.png' %}"></h1>
+          <h2 class="card-subtitle mb-2 text-muted">Recent Updates</h2>
+        </div>
+      </div>
+      <div class="card col-2" style="width: 18rem;">
+        <a style="text-decoration: none;" href="{% url 'eco_admin_app:view_products' %}"><div class="card-body">
+            <h1 class="card-title"><img  style="height:50px;width:50px" src="{% static 'images/inspection.png' %}"></h1>
+          <h2 class="card-subtitle mb-2 text-muted">View Products</h2>
+        </div></a>
+      </div>
+
+</div>
+<div class="row justify-content-around d-flex mt-5 text-center">
+
+    <div class="card col-2" style="width: 18rem;">
+        <div class="card-body">
+            <h1 class="card-title"><img  style="height:50px;width:50px" src="{% static 'images/user.png' %}"></h1>
+          <h2 class="card-subtitle mb-2 text-muted">Remove Seller</h2>
+        </div>
+      </div>
+      <div class="card col-2" style="width: 18rem;">
+        <div class="card-body">
+            <h1 class="card-title"><img  style="height:50px;width:50px" src="{% static 'images/userr.png' %}"></h1>
+          <h2 class="card-subtitle mb-2 text-muted">Remove Customer</h2>
+        </div>
+      </div>
+      <div class="card col-2" style="width: 18rem;">
+        <div class="card-body">
+            <h1 class="card-title"><img  style="height:50px;width:50px" src="{% static 'images/remove.png' %}"></h1>
+          <h2 class="card-subtitle mb-2 text-muted">Remove Product</h2>
+        </div>
+      </div>
+
+</div>
+
+
+
+
+
+
+ 
+ 
+
+
+  
+
+
+{% endblock content %}

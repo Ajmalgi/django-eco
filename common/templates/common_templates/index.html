@@ -1,0 +1,113 @@
+{% extends './main.html' %}
+{% load static %}
+{% block content %}
+
+   <div class="row">
+    <div class="col-8">
+  <video id="myVideo" width="600px"  onclick="pauseVid()" ondblclick="playVid()" muted autoplay loop >
+    <source src="{% static 'images/v2.mp4'%}" type="video/mp4">
+  </video>
+</div>
+<div class="col-4 d-flex  align-items-center">
+    <div >
+    <h1 style="font-size: 70px;">JUST</h1>
+    <h1 style="font-size: 65px;">DO</h1>
+    <h1 style="font-size: 55px;">IT</h1>
+</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <img class="thumbnail " src="{% static 'images/shoe1.jpg' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/shoe2.jpg' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+            
+            <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+            
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/shoe3.jpg' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/shoe4.jpg' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/shoe5.jpg' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+            
+            <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+            
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <img class="thumbnail" src="{% static 'images/shoe6.jpg' %}">
+        <div class="box-element product">
+            <h6><strong>Product</strong></h6>
+            <hr>
+
+            <button  class="btn btn-outline-secondary add-btn">Add to Cart</button>
+            <a class="btn btn-outline-success" href="#">View</a>
+            <h4 style="display: inline-block; float: right"><strong>$20</strong></h4>
+
+        </div>
+    </div>
+</div>
+
+
+<script> 
+    var vid = document.getElementById("myVideo"); 
+    
+    function playVid() { 
+      vid.play(); 
+    } 
+    
+    function pauseVid() { 
+      vid.pause(); 
+    } 
+    </script> 
+{% endblock content %}

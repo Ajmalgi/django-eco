@@ -1,0 +1,42 @@
+{% extends './main.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center">View Products Details</h1>
+
+
+<table class="table table-striped mt-5">
+    <thead >
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Catogery</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col">product pic</th>
+      </tr>
+    </thead>
+    {% for i in product %}
+    <tbody>
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{i.category}}</td>
+        <td >{{i.product_name}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.stock}}</td>
+        <td><img style="height: 50px;width: 70px;" src="{{i.image.url}}" alt=""></td>
+      </tr>
+    </tbody>
+      {% endfor %}
+     
+   
+  </table>
+
+
+ 
+ 
+
+
+  
+
+
+{% endblock content %}

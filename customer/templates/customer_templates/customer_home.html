@@ -1,0 +1,37 @@
+{% extends './customer_main.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center">customer Home</h1>
+
+
+
+
+
+ <span >welcome</span>
+ 
+  <h3>{{cname | upper }}</h3>
+ 
+  <div class="row">
+  {% for product in products %}
+
+    <div class="col-3">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{ product.image.url }}" alt="Card image cap" width="286px"height="190px">
+    <div class="card-body">
+      <h5 class="card-title">{{product.product_name}}</h5>
+      <!-- <p class="card-text">{{product.product_des}}</p> -->
+      <p class="card-text">{{product.price}}</p>
+      <p class="card-text">{{product.seller.name}}</p>
+      <a href="{% url 'customer_app:p_details' product.id %}" class="btn btn-dark">product details</a>
+      
+    </div>
+  </div>
+</div>
+
+
+  {% endfor %}
+</div>
+  
+
+
+{% endblock content %}
